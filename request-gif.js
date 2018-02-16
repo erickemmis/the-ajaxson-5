@@ -13,11 +13,27 @@ $(document).ready(function() {
  * upon receiving a response from Giphy, updates the DOM to display the new GIF
  */
 function fetchAndDisplayGif(event) {
+	
+		
     
     // This prevents the form submission from doing what it normally does: send a request (which would cause our page to refresh).
     // Because we will be making our own AJAX request, we dont need to send a normal request and we definitely don't want the page to refresh.
     event.preventDefault();
     
+		//validate using the captcha-ish
+		var captcha = $('#captcha input:text').val();
+		
+		
+		if(captcha !== '5' && captcha.toLowerCase() !== 'five' ) {
+			$('.c_error').removeClass('hidden');
+			$('#gif:visible').hide();
+			return;
+		}
+		
+		//reset error message
+		$('.c_error').addClass('hidden');
+		$('#gif:hidden').show();
+		
     // get the user's input text from the DOM
     var searchQuery = $('#form-gif-request input:text').val(); // TODONE should be e.g. "dance"
     
@@ -38,8 +54,8 @@ function fetchAndDisplayGif(event) {
             
             // jQuery passes us the `response` variable, a regular javascript object created from the JSON the server gave us
             console.log("we received a response!");
-            console.log(response);
-            console.log(params.tag);
+            //console.log(response);
+            //console.log(params.tag);
             
             // TODONE
             // 1. set the source attribute of our image to the image_url of the GIF
