@@ -25,6 +25,7 @@ function fetchAndDisplayGif(event) {
 		
 		
 		if(captcha !== '5' && captcha.toLowerCase() !== 'five' ) {
+			
 			$('.c_error').removeClass('hidden');
 			$('#gif:visible').hide();
 			return;
