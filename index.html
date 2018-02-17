@@ -10,26 +10,49 @@
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h1>The AJAXson 5</h1>
-		<div class='container'>
-	    <form id="form-gif-request"/>
-	        <label>What kind of Jackson 5 related gif do you want?</label>
-	        <input name="tag" type="text"/>
-	        
-		      <section id='captcha' >
-				    <p>Prove you are not a robot by solving the riddle:</p>
-				    <input type='text' />
-				    <p>Jacksons are better than 1</p>
-				    <span class='c_error hidden'>No gif for you!</span>
-			    </section>
-				    
-	        <input type="submit" value="Get my Gif!" />
-	    </form>
-	    
 	
-	    <img id="gif" src="" hidden="true"/>
-	    <p id="feedback" hidden="true`"></p>
-    </div>
+	
+	<header class='text-align-center'>
+    <h1 >The AJAXson 5</h1>
+	</header>
+	
+	
+	<div class='container'>
+		
+	  <form id="form-gif-request" />
+	  <div class='row'>
+	  
+	  	<section class='card card-body bg-light col-12 col-lg-6'>
+	      <p>What kind of Jackson 5 related gif do you want?</p>
+	      <input class='form-control' name="tag" type="text"/>
+	  	</section>
+	  	
+			<div class='clearfix'></div>	  	 
+      <section id='captcha' class='card card-body bg-light col-12 col-lg-6' >
+			  <p>Prove you are not a robot by solving the riddle:</p>
+	      <div class='input-group'>
+			    <input class='form-control' type='text' />
+			    <div class='input-group-append input-group-text'>
+				    <span>Jacksons are better than 1</span>
+			    </div>
+			    <span class='invalid-feedback'>No gif for you!</span>
+	      </div>
+
+	    </section>
+	  </div>
+			    
+      <input class='btn btn-outline-primary' type="submit" value="Get my Gif!" />
+	  </form>
+	  
+	  <hr>
+	  
+	
+	  <img id="gif" src="" hidden="true"/>
+	  <p id="feedback" hidden="true`"></p>
+	</div>
+	
+	
+	
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

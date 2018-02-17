@@ -21,18 +21,19 @@ function fetchAndDisplayGif(event) {
     event.preventDefault();
     
 		//validate using the captcha-ish
-		var captcha = $('#captcha input:text').val();
+		var $captcha = $('#captcha input:text');
+		var captcha_v = $captcha.val();
 		
-		
-		if(captcha !== '5' && captcha.toLowerCase() !== 'five' ) {
-			
-			$('.c_error').removeClass('hidden');
+		if(captcha_v !== '5' && captcha_v.toLowerCase() !== 'five' ) {
+			$('.invalid-feedback').show();
+			$captcha.parent().addClass('c_error');
 			$('#gif:visible').hide();
 			return;
 		}
 		
 		//reset error message
-		$('.c_error').addClass('hidden');
+		$('.invalid-feedback').hide();
+		$captcha.parent().removeClass('c_error');
 		$('#gif:hidden').show();
 		
     // get the user's input text from the DOM

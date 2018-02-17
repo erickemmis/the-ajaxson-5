@@ -5,3 +5,26 @@
 .c_error {
 	color: red;
 }
+.c_error div {
+	background:#ffc2c2;
+	color: red;
+	border: 1px solid red;
+	border-left: none;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.c_error input {
+		border: 1px solid red;
+}
+.card {
+	margin-bottom: .5rem;
+}
+
+h1 {
+	font-weight: bold;
+	background: lightgrey;
+	padding: 10px;
+	text-align: center;
+}
+
